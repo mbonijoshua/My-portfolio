@@ -23,6 +23,17 @@
         padding-top: 2rem;
     }
 
+    section {
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
+    }
+
+    .about,
+    .skill-section,
+    .project-section {
+        gap: 1rem;
+    }
+
     .hero-section {
         max-width: 100%;
         padding: 0 1rem;
@@ -60,6 +71,32 @@
         padding: 0.9rem 1rem;
     }
 
+    .menu-toggle {
+        display: block;
+        flex: 0 0 auto;
+    }
+
+    .navbar-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        padding: 0.5rem 1rem 1rem;
+        background: rgba(5, 12, 40, 0.98);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .navbar-menu.is-open {
+        display: flex;
+    }
+
+    .navbar-menu a {
+        padding: 0.75rem 0;
+    }
+
     .hero,
     .about {
         display: grid;
@@ -79,6 +116,10 @@
         margin: 0 auto;
         max-width: 100%;
         padding: 0 1rem;
+    }
+
+    .hero-title {
+        overflow-wrap: anywhere;
     }
 
     .profile-picture,
@@ -101,11 +142,14 @@
 
     .skill-section {
         display: grid;
+        grid-template-columns: minmax(0, 1fr);
         gap: 1rem;
     }
 
     .skill-card {
         min-width: 0;
+        width: min(100%, 22rem);
+        justify-self: center;
     }
 
     .project-card {
@@ -169,6 +213,7 @@
         flex-direction: column;
         gap: 0.5rem;
         align-items: center;
+        text-align: center;
     }
 }
 

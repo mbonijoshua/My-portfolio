@@ -66,6 +66,24 @@ header.navbar-section {
     font-size: 0.95rem;
 }
 
+.menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding: 0.65rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 2px;
+    margin: 4px 0;
+    background: #eef0f3;
+}
+
 .navbar-menu a {
     color: #eef0f3;
     text-decoration: none;

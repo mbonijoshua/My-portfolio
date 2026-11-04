@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .container {
+            outline: none;
+        }
+        .container:focus {
+          border-style: solid;
+          border-color: green;
+          color: red;
+        }
+
+        .mobile-menu-container{
+            display: flex;
+            width: 40px;
+            height: 40px;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 8px 5px;
+        }
+
+        .bar{
+            display: block;
+            width: 100%;
+            background-color: black;
+            border-width: 10px;
+            height: 5px;
+            margin: 6px 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #mobile-menu.active .bar:nth-child(1){
+            transform: translateY(13px) rotate(45deg);
+        }
+
+        #mobile-menu.active .bar:nth-child(2){
+            opacity: 0;
+        }
+
+        #mobile-menu.active .bar:nth-child(3){
+            transform: translateY(-13px) rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <input type="text" class="container">
+    <div class="mobile-menu-container" id="mobile-menu">
+        <span class="bar" ></span>
+        <span class="bar" ></span>
+        <span class="bar" ></span>
+    </div>
+
+    <script>
+       const menuToggle = document.querySelector('#mobile-menu');
+       menuToggle.addEventListener('click', () => {
+         menuToggle.classList.toggle('active');
+       });
+
+    </script>
+</body>
+</html>
